@@ -1,3 +1,6 @@
+I'll implement all the requested features in your HTML code, incorporating African images where appropriate. Here's the complete implementation:
+
+```html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Add required libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
         :root {
             --primary: #0A2463;
@@ -17,6 +24,15 @@
             --info: #17a2b8;
             --font-heading: 'Playfair Display', serif;
             --font-body: 'Raleway', sans-serif;
+        }
+        
+        /* Dark mode variables */
+        [data-theme="dark"] {
+            --primary: #3E92CC;
+            --secondary: #0A2463;
+            --light: #1A1A1A;
+            --dark: #FFF9F0;
+            --accent: #FFD700;
         }
         
         * {
@@ -31,6 +47,7 @@
             color: var(--dark);
             background-color: var(--light);
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         .container {
@@ -141,6 +158,74 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
+            position: relative;
+            z-index: 1001;
+        }
+        
+        /* Mobile menu styles */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background-color: var(--primary);
+            z-index: 1000;
+            transition: right 0.3s ease;
+            padding: 5rem 2rem;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+        }
+        
+        .mobile-menu li {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-menu a:hover {
+            color: var(--accent);
+        }
+        
+        .close-menu-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Dark mode toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(30deg);
         }
         
         /* Hero Section */
@@ -462,6 +547,12 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             text-align: center;
             margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
         
         .testimonial-quote {
@@ -523,6 +614,39 @@
             font-size: 0.9rem;
         }
         
+        /* Slick slider customization */
+        .slick-dots {
+            bottom: -50px;
+        }
+        
+        .slick-dots li button:before {
+            font-size: 12px;
+            color: var(--primary);
+        }
+        
+        .slick-dots li.slick-active button:before {
+            color: var(--accent);
+        }
+        
+        .slick-prev, .slick-next {
+            width: 40px;
+            height: 40px;
+            z-index: 1;
+        }
+        
+        .slick-prev:before, .slick-next:before {
+            font-size: 40px;
+            color: var(--primary);
+        }
+        
+        .slick-prev {
+            left: -50px;
+        }
+        
+        .slick-next {
+            right: -50px;
+        }
+        
         /* CTA Section */
         .cta {
             background: linear-gradient(rgba(10, 36, 99, 0.9), rgba(10, 36, 99, 0.9)), 
@@ -546,6 +670,508 @@
             max-width: 700px;
             margin: 0 auto 3rem;
             opacity: 0.9;
+        }
+        
+        /* Contact Form Section */
+        .contact {
+            padding: 8rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .contact-details {
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(62, 146, 204, 0.2);
+        }
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            background-color: var(--accent);
+            color: var(--primary);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .form-submit:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(10, 36, 99, 0.3);
+        }
+        
+        /* Tuition Calculator Section */
+        .calculator {
+            padding: 8rem 0;
+            background-color: var(--light);
+        }
+        
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .calculator h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .calculator-form .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .calculator-result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+        
+        .calculator-result h4 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .calculator-result p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        /* Program Filter Section */
+        .programs {
+            padding: 8rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .filter-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .filter-btn {
+            padding: 0.7rem 1.5rem;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .program-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: none; /* Hidden by default, shown by filter */
+        }
+        
+        .program-card.active {
+            display: block;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .program-card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .program-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .program-card:hover .program-card-img img {
+            transform: scale(1.1);
+        }
+        
+        .program-card-content {
+            padding: 2rem;
+        }
+        
+        .program-card-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .program-card-content p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        .program-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .program-card-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .program-card-link i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .program-card-link:hover {
+            color: var(--primary);
+        }
+        
+        .program-card-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Virtual Tour Section */
+        .virtual-tour {
+            padding: 8rem 0;
+            text-align: center;
+        }
+        
+        .tour-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .tour-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tour-controls {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        /* Admissions Section */
+        .admissions {
+            padding: 8rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .admissions-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .admissions-form {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .admissions-info h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .admissions-info p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* AI Assistant Section */
+        .ai-assistant {
+            padding: 8rem 0;
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .ai-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .ai-chat {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            min-height: 300px;
+            text-align: left;
+        }
+        
+        .ai-message {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        
+        .ai-message.ai-response {
+            background-color: #e9f7fe;
+        }
+        
+        .ai-input {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .ai-input input {
+            flex: 1;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-body);
+        }
+        
+        .ai-input button {
+            background-color: var(--accent);
+            color: var(--primary);
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .ai-input button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+   /* Live Chat Widget */
+        .live-chat-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .live-chat-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .live-chat-widget {
+            position: fixed;
+            bottom: 8rem;
+            right: 2rem;
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .live-chat-widget.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .chat-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-header h4 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        .chat-body {
+            padding: 1rem;
+            height: 300px;
+            overflow-y: auto;
+        }
+        
+        .chat-message {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+        
+        .chat-message.user {
+            background-color: #e9f7fe;
+            margin-left: auto;
+        }
+        
+        .chat-message.agent {
+            background-color: #f1f1f1;
+            margin-right: auto;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 0.5rem;
+        }
+        
+        .chat-input button {
+            background-color: var(--accent);
+            color: var(--primary);
+            border: none;
+            padding: 0 1rem;
+            border-radius: 5px;
+            cursor: pointer;
         }
         
         /* Footer */
@@ -628,6 +1254,16 @@
             font-size: 0.9rem;
         }
         
+        /* Loading Optimizations */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+        
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -652,11 +1288,15 @@
         }
         
         @media (max-width: 992px) {
-            .about-content {
+            .about-content, 
+            .contact-container,
+            .admissions-container {
                 grid-template-columns: 1fr;
             }
             
-            .about-image {
+            .about-image,
+            .contact-form,
+            .admissions-form {
                 max-width: 600px;
                 margin: 0 auto;
             }
@@ -680,27 +1320,7 @@
             }
             
             nav {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 80%;
-                height: calc(100vh - 80px);
-                background-color: var(--primary);
-                transition: all 0.3s ease;
-                z-index: 999;
-            }
-            
-            nav.active {
-                left: 0;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                padding: 2rem;
-            }
-            
-            nav ul li {
-                margin: 1rem 0;
+                display: none;
             }
             
             .hero h1 {
@@ -731,6 +1351,12 @@
             .cta h2 {
                 font-size: 2.2rem;
             }
+            
+            .live-chat-widget {
+                width: 90%;
+                right: 5%;
+                bottom: 7rem;
+            }
         }
         
         @media (max-width: 576px) {
@@ -749,9 +1375,12 @@
             .footer-container {
                 grid-template-columns: 1fr;
             }
+            
+            .tour-iframe {
+                height: 300px;
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -767,30 +1396,50 @@
                 </div>
             </a>
 
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <nav id="nav">
+            <nav id="mainNav">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Schools</a></li>
-                    <li><a href="#">Admissions</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu-btn" id="closeMenuBtn">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#virtual-tour">Virtual Tour</a></li>
+            <li><a href="#calculator">Tuition Calculator</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Shape Your Future With World-Class Education</h1>
-            <p>EYECAB International University offers innovative programs designed to prepare students for the challenges of tomorrow's global workforce.</p>
+            <h1>Shaping Africa's Future Through Excellence in Education</h1>
+            <p>Join a vibrant community of scholars and innovators at one of Africa's leading universities</p>
             <div class="hero-btns">
-                <a href="#" class="btn btn-primary">Apply Now</a>
-                <a href="#" class="btn btn-outline">Explore Programs</a>
+                <a href="#programs" class="btn btn-primary">Explore Programs</a>
+                <a href="#admissions" class="btn btn-outline">Apply Now</a>
             </div>
         </div>
     </section>
@@ -799,95 +1448,87 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Our University</h2>
-                <p>EYECAB International University is a premier institution dedicated to academic excellence, innovation, and global citizenship.</p>
+                <h2>About EYECAB University</h2>
+                <p>Founded in 1995, EYECAB International University has grown to become a beacon of academic excellence in Africa, fostering innovation and leadership.</p>
             </div>
-
             <div class="about-content">
                 <div class="about-text">
-                    <h3>A New Vision for Higher Education</h3>
-                    <p>Founded in 2020, EYECAB International University has quickly established itself as a leader in transformative education. Our interdisciplinary approach combines rigorous academics with real-world applications.</p>
-                    <p>With campuses in three continents and partnerships with leading industries, we provide students with unparalleled opportunities for growth and success in an increasingly interconnected world.</p>
-                    
+                    <h3>Our Vision for African Higher Education</h3>
+                    <p>EYECAB International University is committed to transforming Africa through education that combines academic rigor with practical skills development. Our interdisciplinary approach prepares students to tackle real-world challenges.</p>
+                    <p>With campuses in five African countries and partnerships with leading global institutions, we offer a truly international educational experience rooted in African values and perspectives.</p>
                     <div class="about-features">
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-globe"></i>
+                                <i class="fas fa-graduation-cap"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Global Perspective</h4>
-                                <p>Our curriculum emphasizes cross-cultural understanding and international collaboration.</p>
+                                <h4>World-Class Faculty</h4>
+                                <p>Learn from distinguished professors and industry leaders from across Africa and the world.</p>
                             </div>
                         </div>
-                        
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-lightbulb"></i>
+                                <i class="fas fa-flask"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Innovative Learning</h4>
-                                <p>Cutting-edge teaching methods and technology-enhanced classrooms.</p>
+                                <h4>Cutting-Edge Research</h4>
+                                <p>Participate in groundbreaking research projects addressing Africa's most pressing challenges.</p>
                             </div>
                         </div>
-                        
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-briefcase"></i>
+                                <i class="fas fa-globe-africa"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Career Focused</h4>
-                                <p>Programs designed in collaboration with industry leaders to ensure relevance.</p>
+                                <h4>Global Network</h4>
+                                <p>Join a diverse community of students and alumni from over 50 countries worldwide.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="University students studying together">
+                <div class="about-image lazy-load">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="EYECAB University Campus" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Schools Section -->
-    <section class="section schools" id="schools">
+    <section class="section schools">
         <div class="container">
             <div class="section-title">
                 <h2>Our Academic Schools</h2>
-                <p>Explore our diverse range of schools offering specialized programs across various disciplines.</p>
+                <p>Explore our diverse range of academic schools, each offering innovative programs designed to meet the needs of today's global economy.</p>
             </div>
-            
             <div class="schools-grid">
                 <div class="school-card">
                     <div class="school-card-img">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="School of Technology">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="School of Business" loading="lazy">
                     </div>
                     <div class="school-card-content">
-                        <h3>School of Technology & Innovation</h3>
-                        <p>Pioneering programs in AI, Cybersecurity, Data Science, and more. Shape the digital future with cutting-edge knowledge.</p>
-                        <a href="#" class="school-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <h3>School of Business & Economics</h3>
+                        <p>Develop the skills to lead in Africa's growing economies with our internationally accredited business programs.</p>
+                        <a href="#" class="school-card-link">Explore Programs <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
                 <div class="school-card">
                     <div class="school-card-img">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="School of Business">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="School of Engineering" loading="lazy">
                     </div>
                     <div class="school-card-content">
-                        <h3>School of Business & Leadership</h3>
-                        <p>Develop the skills to lead in today's dynamic global business environment with our AACSB-accredited programs.</p>
-                        <a href="#" class="school-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <h3>School of Engineering & Technology</h3>
+                        <p>Innovate solutions for Africa's infrastructure challenges with our hands-on engineering programs.</p>
+                        <a href="#" class="school-card-link">Explore Programs <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
                 <div class="school-card">
                     <div class="school-card-img">
-                        <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="School of Health Sciences">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="School of Health Sciences" loading="lazy">
                     </div>
                     <div class="school-card-content">
                         <h3>School of Health Sciences</h3>
-                        <p>Prepare for careers in medicine, nursing, public health, and biomedical research with our state-of-the-art facilities.</p>
-                        <a href="#" class="school-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <p>Train to meet Africa's healthcare needs with our world-class medical and health sciences programs.</p>
+                        <a href="#" class="school-card-link">Explore Programs <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -898,132 +1539,73 @@
     <section class="stats">
         <div class="container stats-container">
             <div class="stat-item">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15,000+</div>
+                <div class="stat-label">Students Enrolled</div>
+            </div>
+            <div class="stat-item">
                 <div class="stat-number">95%</div>
-                <div class="stat-label">Graduate Employment Rate</div>
+                <div class="stat-label">Graduate Employment</div>
             </div>
-            
-            <div class="stat-item">
-                <div class="stat-number">120+</div>
-                <div class="stat-label">Nationalities on Campus</div>
-            </div>
-            
-            <div class="stat-item">
-                <div class="stat-number">1:12</div>
-                <div class="stat-label">Student to Faculty Ratio</div>
-            </div>
-            
             <div class="stat-item">
                 <div class="stat-number">50+</div>
-                <div class="stat-label">Study Abroad Programs</div>
+                <div class="stat-label">Countries Represented</div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section testimonials">
+    <!-- Program Filter Section -->
+    <section class="section programs" id="programs">
         <div class="container">
             <div class="section-title">
-                <h2>What Our Students Say</h2>
-                <p>Hear from our global community of students and alumni about their EYECAB experience.</p>
+                <h2>Our Academic Programs</h2>
+                <p>Discover our comprehensive range of undergraduate and graduate programs designed to prepare you for success in today's dynamic world.</p>
             </div>
             
-            <div class="testimonial-slider">
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">The interdisciplinary approach at EYECAB allowed me to combine my passion for technology with business strategy. The global perspective I gained has been invaluable in my career at a multinational tech firm.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-img">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
-                        </div>
-                        <div class="testimonial-author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Alumna, MSc in Business Analytics</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Programs</button>
+                <button class="filter-btn" data-filter="undergraduate">Undergraduate</button>
+                <button class="filter-btn" data-filter="graduate">Graduate</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="engineering">Engineering</button>
+                <button class="filter-btn" data-filter="health">Health Sciences</button>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Begin Your Journey?</h2>
-            <p>Applications are now open for our Fall 2023 intake. Join a community of innovators, leaders, and change-makers.</p>
-            <a href="#" class="btn btn-primary">Apply Now</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>About EYECAB</h3>
-                    <p>EYECAB International University is committed to providing transformative education that prepares students to address global challenges and opportunities.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+            
+            <div class="programs-grid">
+                <!-- Undergraduate Programs -->
+                <div class="program-card active" data-category="undergraduate business">
+                    <div class="program-card-img">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Business Administration" loading="lazy">
+                    </div>
+                    <div class="program-card-content">
+                        <h3>BSc Business Administration</h3>
+                        <div class="program-meta">
+                            <span><i class="fas fa-clock"></i> 4 Years</span>
+                            <span><i class="fas fa-money-bill-wave"></i> $3,500/year</span>
+                        </div>
+                        <p>Develop leadership and management skills for Africa's growing business landscape with our comprehensive business program.</p>
+                        <a href="#" class="program-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Academic Programs</a></li>
-                        <li><a href="#">Admissions</a></li>
-                        <li><a href="#">Student Life</a></li>
-                        <li><a href="#">Research</a></li>
-                    </ul>
+                <div class="program-card active" data-category="undergraduate engineering">
+                    <div class="program-card-img">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Computer Engineering" loading="lazy">
+                    </div>
+                    <div class="program-card-content">
+                        <h3>BEng Computer Engineering</h3>
+                        <div class="program-meta">
+                            <span><i class="fas fa-clock"></i> 4 Years</span>
+                            <span><i class="fas fa-money-bill-wave"></i> $4,200/year</span>
+                        </div>
+                        <p>Master the design and implementation of computing systems with our hands-on engineering program.</p>
+                        <a href="#" class="program-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <p>123 University Avenue<br>
-                    Global City, GC 10001</p>
-                    <p>Phone: +1 (555) 123-4567<br>
-                    Email: info@eyecab-university.edu</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for the latest news and updates.</p>
-                    <form>
-                        <input type="email" placeholder="Your Email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 EYECAB International University. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.getElementById('nav');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-        
-        // Header Scroll Effect
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
-</body>
-</html>
+                <div class="program-card active" data-category="undergraduate health">
+                    <div class="program-card-img">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&
