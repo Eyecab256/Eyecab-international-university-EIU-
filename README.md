@@ -1,6 +1,3 @@
-I'll implement all the requested features in your HTML code, incorporating African images where appropriate. Here's the complete implementation:
-
-```html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1608,4 +1605,870 @@ I'll implement all the requested features in your HTML code, incorporating Afric
                 
                 <div class="program-card active" data-category="undergraduate health">
                     <div class="program-card-img">
-                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&
+                          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Nursing" loading="lazy">
+                    </div>
+                    <div class="program-card-content">
+                        <h3>BSc Nursing</h3>
+                        <div class="program-meta">
+                            <span><i class="fas fa-clock"></i> 4 Years</span>
+                            <span><i class="fas fa-money-bill-wave"></i> $3,800/year</span>
+                        </div>
+                        <p>Train to meet Africa's healthcare needs with our comprehensive nursing program combining theory and clinical practice.</p>
+                        <a href="#" class="program-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Graduate Programs -->
+                <div class="program-card active" data-category="graduate business">
+                    <div class="program-card-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="MBA" loading="lazy">
+                    </div>
+                    <div class="program-card-content">
+                        <h3>MBA (Master of Business Administration)</h3>
+                        <div class="program-meta">
+                            <span><i class="fas fa-clock"></i> 2 Years</span>
+                            <span><i class="fas fa-money-bill-wave"></i> $5,500/year</span>
+                        </div>
+                        <p>Advance your leadership potential with our AACSB-accredited MBA program focused on African business contexts.</p>
+                        <a href="#" class="program-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card active" data-category="graduate engineering">
+                    <div class="program-card-img">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Data Science" loading="lazy">
+                    </div>
+                    <div class="program-card-content">
+                        <h3>MSc Data Science</h3>
+                        <div class="program-meta">
+                            <span><i class="fas fa-clock"></i> 18 Months</span>
+                            <span><i class="fas fa-money-bill-wave"></i> $4,800/year</span>
+                        </div>
+                        <p>Develop expertise in big data analytics and machine learning to solve complex problems in African contexts.</p>
+                        <a href="#" class="program-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card active" data-category="graduate health">
+                    <div class="program-card-img">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Public Health" loading="lazy">
+                    </div>
+                    <div class="program-card-content">
+                        <h3>MPH (Master of Public Health)</h3>
+                        <div class="program-meta">
+                            <span><i class="fas fa-clock"></i> 2 Years</span>
+                            <span><i class="fas fa-money-bill-wave"></i> $4,200/year</span>
+                        </div>
+                        <p>Address public health challenges in Africa through our interdisciplinary MPH program with field placements.</p>
+                        <a href="#" class="program-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Students Say</h2>
+                <p>Hear from our students and alumni about their experiences at EYECAB International University.</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        Studying at EYECAB transformed my perspective on African business. The faculty's real-world experience and the diverse student body prepared me perfectly for my career in Lagos.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Amina Johnson">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Amina Johnson</h4>
+                            <p>MBA Graduate, Class of 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        The engineering program's focus on sustainable solutions for African infrastructure challenges gave me the skills to immediately contribute to my community after graduation.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kwame Ofori">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Kwame Ofori</h4>
+                            <p>BEng Civil Engineering, Class of 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        As an international student from Kenya, I found a welcoming community and academic support that helped me thrive in my public health studies.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-img">
+                            <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Wanjiku Mwangi">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Wanjiku Mwangi</h4>
+                            <p>MPH Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Virtual Tour Section -->
+    <section class="section virtual-tour" id="virtual-tour">
+        <div class="container">
+            <div class="section-title">
+                <h2>Virtual Campus Tour</h2>
+                <p>Explore our state-of-the-art facilities from anywhere in the world with our 360° virtual tour.</p>
+            </div>
+            
+            <div class="tour-container">
+                <iframe class="tour-iframe" src="https://www.google.com/maps/embed?pb=!4v1620000000000!6m8!1m7!1sCAoSLEFGMVFpcE5fV3ZqTlV5b0hQYVJxY0ZQbWJfS2x0bVd3VW5vZ2Z4d3ZfY2th!2m2!1d9.057645!2d7.495084!3f0!4f0!5f0.7820865974627469" allowfullscreen="" loading="lazy"></iframe>
+                <div class="tour-controls">
+                    <button class="btn btn-outline" onclick="tourFullscreen()"><i class="fas fa-expand"></i> Fullscreen</button>
+                    <button class="btn btn-primary" onclick="startGuidedTour()"><i class="fas fa-play"></i> Guided Tour</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuition Calculator Section -->
+    <section class="section calculator" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tuition Calculator</h2>
+                <p>Estimate your educational costs with our simple tuition calculator.</p>
+            </div>
+            
+            <div class="calculator-container">
+                <h3>Calculate Your Tuition</h3>
+                <form class="calculator-form" id="tuitionCalculator">
+                    <div class="form-group">
+                        <label for="program-level">Program Level</label>
+                        <select class="form-control" id="program-level" required>
+                            <option value="">Select Program Level</option>
+                            <option value="undergraduate">Undergraduate</option>
+                            <option value="graduate">Graduate</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="program-type">Program Type</label>
+                        <select class="form-control" id="program-type" required>
+                            <option value="">Select Program Type</option>
+                            <option value="business">Business</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="health">Health Sciences</option>
+                            <option value="arts">Arts & Humanities</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="residency">Residency Status</label>
+                        <select class="form-control" id="residency" required>
+                            <option value="">Select Residency Status</option>
+                            <option value="domestic">Domestic (African)</option>
+                            <option value="international">International</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="duration">Duration (years)</label>
+                        <input type="number" class="form-control" id="duration" min="1" max="6" value="4" required>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Calculate Tuition</button>
+                </form>
+                
+                <div class="calculator-result" id="calculatorResult">
+                    <h4>Estimated Total Tuition</h4>
+                    <p id="tuitionAmount">$0</p>
+                    <p id="tuitionBreakdown"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- AI Assistant Section -->
+    <section class="section ai-assistant">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI Admissions Assistant</h2>
+                <p>Get instant answers to your questions about admissions, programs, and student life.</p>
+            </div>
+            
+            <div class="ai-container">
+                <div class="ai-chat" id="aiChat">
+                    <div class="ai-message ai-response">
+                        <strong>EYECAB Assistant:</strong> Hello! I'm here to help answer your questions about EYECAB International University. What would you like to know about our programs, admissions process, or campus life?
+                    </div>
+                </div>
+                
+                <div class="ai-input">
+                    <input type="text" id="aiQuestion" placeholder="Ask me anything about EYECAB University...">
+                    <button id="aiSubmit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section class="section admissions" id="admissions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Admissions</h2>
+                <p>Begin your journey to becoming part of the EYECAB community.</p>
+            </div>
+            
+            <div class="admissions-container">
+                <div class="admissions-info">
+                    <h3>Join Our Global Community</h3>
+                    <p>EYECAB International University seeks students who demonstrate academic excellence, leadership potential, and a commitment to making a difference in Africa and beyond.</p>
+                    <p>Our holistic admissions process considers your academic achievements, extracurricular involvement, and personal essays. We welcome applications from all African countries and international students worldwide.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Application Deadlines</h4>
+                                <p>Fall Semester: June 30<br>Spring Semester: November 15</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Admission Requirements</h4>
+                                <p>Vary by program. Most require transcripts, test scores, letters of recommendation, and a personal statement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#programs" class="btn btn-primary" style="margin-top: 2rem;">Explore All Programs</a>
+                </div>
+                
+                <div class="admissions-form">
+                    <h3>Start Your Application</h3>
+                    <form id="admissionForm">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" class="form-control" id="full-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">Country of Residence</label>
+                            <select class="form-control" id="country" required>
+                                <option value="">Select Country</option>
+                                <option value="nigeria">Nigeria</option>
+                                <option value="ghana">Ghana</option>
+                                <option value="kenya">Kenya</option>
+                                <option value="south-africa">South Africa</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="program-interest">Program of Interest</label>
+                            <select class="form-control" id="program-interest" required>
+                                <option value="">Select Program</option>
+                                <optgroup label="Undergraduate Programs">
+                                    <option value="bs-business">BSc Business Administration</option>
+                                    <option value="beng-computer">BEng Computer Engineering</option>
+                                    <option value="bs-nursing">BSc Nursing</option>
+                                </optgroup>
+                                <optgroup label="Graduate Programs">
+                                    <option value="mba">MBA</option>
+                                    <option value="msc-data">MSc Data Science</option>
+                                    <option value="mph">MPH (Public Health)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="entry-term">Preferred Entry Term</label>
+                            <select class="form-control" id="entry-term" required>
+                                <option value="">Select Term</option>
+                                <option value="fall-2023">Fall 2023</option>
+                                <option value="spring-2024">Spring 2024</option>
+                                <option value="fall-2024">Fall 2024</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Information</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions? We're here to help. Reach out to our admissions team or visit our campuses.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Our team is ready to assist you with any questions about programs, admissions, financial aid, or campus life. Contact us using the information below or fill out the form.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Main Campus</h4>
+                                <p>123 University Avenue, Accra, Ghana</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+233 123 456 789</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>admissions@eyecab.edu.gh</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" class="form-control" id="contact-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" class="form-control" id="contact-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" class="form-control" id="contact-subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea class="form-control" id="contact-message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Future?</h2>
+            <p>Join EYECAB International University and become part of a new generation of African leaders and innovators.</p>
+            <div class="hero-btns">
+                <a href="#admissions" class="btn btn-primary">Apply Now</a>
+                <a href="#contact" class="btn btn-outline">Contact Admissions</a>
+            </div>
+        </div>
+    </section>
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About EYECAB</h3>
+                    <p>EYECAB International University is a leading institution of higher education in Africa, committed to academic excellence, research innovation, and community engagement.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Academic</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Schools & Departments</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Research Centers</a></li>
+                        <li><a href="#">Online Learning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Faculty Portal</a></li>
+                        <li><a href="#">Alumni Network</a></li>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">News & Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 EYECAB International University. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <div class="live-chat-btn" id="liveChatBtn">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    
+    <div class="live-chat-widget" id="liveChatWidget">
+        <div class="chat-header">
+            <h4>EYECAB Admissions Support</h4>
+            <button class="close-chat" id="closeChatBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-message agent">
+                <strong>Admissions Officer:</strong> Hello! How can we assist you today?
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatMessage" placeholder="Type your message...">
+            <button id="sendChatBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Loading Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+        
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Testimonial Slider
+        $(document).ready(function(){
+            $('.testimonial-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+            });
+        });
+        
+        // Program Filter
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Show/hide program cards based on filter
+                document.querySelectorAll('.program-card').forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filterValue)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+// Tuition Calculator
+        const tuitionCalculator = document.getElementById('tuitionCalculator');
+        const calculatorResult = document.getElementById('calculatorResult');
+        const tuitionAmount = document.getElementById('tuitionAmount');
+        const tuitionBreakdown = document.getElementById('tuitionBreakdown');
+        
+        // Tuition rates (in USD per year)
+        const tuitionRates = {
+            undergraduate: {
+                business: {
+                    domestic: 3500,
+                    international: 4500
+                },
+                engineering: {
+                    domestic: 4200,
+                    international: 5200
+                },
+                health: {
+                    domestic: 3800,
+                    international: 4800
+                },
+                arts: {
+                    domestic: 3200,
+                    international: 4200
+                }
+            },
+            graduate: {
+                business: {
+                    domestic: 5500,
+                    international: 6500
+                },
+                engineering: {
+                    domestic: 4800,
+                    international: 5800
+                },
+                health: {
+                    domestic: 4200,
+                    international: 5200
+                },
+                arts: {
+                    domestic: 3800,
+                    international: 4800
+                }
+            }
+        };
+        
+        tuitionCalculator.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const programLevel = document.getElementById('program-level').value;
+            const programType = document.getElementById('program-type').value;
+            const residency = document.getElementById('residency').value;
+            const duration = parseInt(document.getElementById('duration').value);
+            
+            // Calculate tuition
+            const annualTuition = tuitionRates[programLevel][programType][residency];
+            const totalTuition = annualTuition * duration;
+            
+            // Display result
+            tuitionAmount.textContent = `$${totalTuition.toLocaleString()}`;
+            tuitionBreakdown.textContent = `($${annualTuition.toLocaleString()} per year x ${duration} years)`;
+            
+            calculatorResult.style.display = 'block';
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+            
+            // Here you would typically send the data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been sent. We'll respond to you at ${email} soon.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Admission Form Submission
+        const admissionForm = document.getElementById('admissionForm');
+        admissionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const program = document.getElementById('program-interest').value;
+            
+            // Here you would typically send the data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Thank you, ${name}! Your application for ${program} has been received. We'll contact you at ${email} with next steps.`);
+            
+            // Reset form
+            admissionForm.reset();
+        });
+        
+        // Live Chat Widget
+        const liveChatBtn = document.getElementById('liveChatBtn');
+        const closeChatBtn = document.getElementById('closeChatBtn');
+        const liveChatWidget = document.getElementById('liveChatWidget');
+        const chatBody = document.getElementById('chatBody');
+        const chatMessage = document.getElementById('chatMessage');
+        const sendChatBtn = document.getElementById('sendChatBtn');
+        
+        liveChatBtn.addEventListener('click', () => {
+            liveChatWidget.classList.toggle('active');
+        });
+        
+        closeChatBtn.addEventListener('click', () => {
+            liveChatWidget.classList.remove('active');
+        });
+        
+        sendChatBtn.addEventListener('click', sendChatMessage);
+        chatMessage.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        });
+        
+        function sendChatMessage() {
+            const message = chatMessage.value.trim();
+            if (message) {
+                // Add user message
+                const userMessage = document.createElement('div');
+                userMessage.className = 'chat-message user';
+                userMessage.innerHTML = `<strong>You:</strong> ${message}`;
+                chatBody.appendChild(userMessage);
+                
+                // Clear input
+                chatMessage.value = '';
+                
+                // Scroll to bottom
+                chatBody.scrollTop = chatBody.scrollHeight;
+                
+                // Simulate response after a delay
+                setTimeout(() => {
+                    const responses = [
+                        "Thank you for your message. An admissions officer will respond shortly.",
+                        "For information about application deadlines, please visit our admissions page.",
+                        "Our typical response time is 1-2 business days.",
+                        "Would you like us to email you more information about our programs?",
+                        "Thank you for your interest in EYECAB University!"
+                    ];
+                    
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    
+                    const agentMessage = document.createElement('div');
+                    agentMessage.className = 'chat-message agent';
+                    agentMessage.innerHTML = `<strong>Admissions Officer:</strong> ${randomResponse}`;
+                    chatBody.appendChild(agentMessage);
+                    
+                    // Scroll to bottom
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                }, 1000);
+            }
+        }
+        
+        // AI Assistant
+        const aiChat = document.getElementById('aiChat');
+        const aiQuestion = document.getElementById('aiQuestion');
+        const aiSubmit = document.getElementById('aiSubmit');
+        
+        aiSubmit.addEventListener('click', sendAIQuestion);
+        aiQuestion.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendAIQuestion();
+            }
+        });
+        
+        function sendAIQuestion() {
+            const question = aiQuestion.value.trim();
+            if (question) {
+                // Add user question
+                const userMessage = document.createElement('div');
+                userMessage.className = 'ai-message';
+                userMessage.textContent = question;
+                aiChat.appendChild(userMessage);
+                
+                // Clear input
+                aiQuestion.value = '';
+                
+                // Scroll to bottom
+                aiChat.scrollTop = aiChat.scrollHeight;
+                
+                // Show typing indicator
+                const typingIndicator = document.createElement('div');
+                typingIndicator.className = 'ai-message ai-response';
+                typingIndicator.innerHTML = '<strong>EYECAB Assistant:</strong> <span class="typing">Typing...</span>';
+                aiChat.appendChild(typingIndicator);
+                aiChat.scrollTop = aiChat.scrollHeight;
+                
+                // Simulate response after a delay
+                setTimeout(() => {
+                    // Remove typing indicator
+                    typingIndicator.remove();
+                    
+                    // Generate response based on keywords
+                    let response = "I'm sorry, I couldn't find specific information about that. ";
+                    response += "For more detailed assistance, please contact our admissions office at admissions@eyecab.edu.gh.";
+                    
+                    if (question.toLowerCase().includes('admission') || question.toLowerCase().includes('apply')) {
+                        response = "Our admissions process requires submission of academic transcripts, a personal statement, and letters of recommendation. ";
+                        response += "The application deadline for Fall 2023 is June 30. Would you like me to direct you to the application form?";
+                    } else if (question.toLowerCase().includes('tuition') || question.toLowerCase().includes('fee')) {
+                        response = "Tuition fees vary by program and residency status. Undergraduate programs range from $3,200-$4,200 per year for African students. ";
+                        response += "You can use our tuition calculator for a more accurate estimate based on your program of interest.";
+                    } else if (question.toLowerCase().includes('program') || question.toLowerCase().includes('course')) {
+                        response = "We offer a wide range of undergraduate and graduate programs across business, engineering, health sciences, and arts. ";
+                        response += "Our most popular programs include Business Administration, Computer Engineering, and Public Health. ";
+                        response += "Would you like me to show you programs in a specific field?";
+                    } else if (question.toLowerCase().includes('scholarship') || question.toLowerCase().includes('financial aid')) {
+                        response = "EYECAB offers several scholarship opportunities based on academic merit and financial need. ";
+                        response += "Our African Leaders Scholarship covers up to 50% of tuition for outstanding students from African countries. ";
+                        response += "The application deadline for scholarships is usually March 1 for the following academic year.";
+                    }
+                    
+                    // Add AI response
+                    const aiResponse = document.createElement('div');
+                    aiResponse.className = 'ai-message ai-response';
+                    aiResponse.innerHTML = `<strong>EYECAB Assistant:</strong> ${response}`;
+                    aiChat.appendChild(aiResponse);
+                    
+                    // Scroll to bottom
+                    aiChat.scrollTop = aiChat.scrollHeight;
+                }, 1500);
+            }
+        }
+        
+        // Virtual Tour Functions
+        function tourFullscreen() {
+            const iframe = document.querySelector('.tour-iframe');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+        }
+        
+        function startGuidedTour() {
+            alert('Starting guided virtual tour. This would typically launch a pre-recorded guided tour of the campus.');
+        }
+        
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Check for saved theme preference or use system preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            if (document.body.getAttribute('data-theme') === 'dark') {
+                document.body.removeAttribute('data-theme');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+        
+        // Lazy Loading
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = document.querySelectorAll('.lazy-load');
+            
+            const lazyLoad = function() {
+                lazyImages.forEach(img => {
+                    if (img.getBoundingClientRect().top <= window.innerHeight && img.getBoundingClientRect().bottom >= 0) {
+                        img.classList.add('loaded');
+                    }
+                });
+            };
+            
+            // Load images that are already in view
+            lazyLoad();
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', lazyLoad);
+        });
+    </script>
+</body>
+</html>
