@@ -749,6 +749,7 @@
             border-color: var(--secondary);
             box-shadow: 0 0 0 3px rgba(62, 146, 204, 0.2);
         }
+        
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
@@ -1057,7 +1058,8 @@
             background-color: var(--primary);
             color: white;
         }
-   /* Live Chat Widget */
+        
+        /* Live Chat Widget */
         .live-chat-btn {
             position: fixed;
             bottom: 2rem;
@@ -1605,7 +1607,7 @@
                 
                 <div class="program-card active" data-category="undergraduate health">
                     <div class="program-card-img">
-                          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Nursing" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Nursing" loading="lazy">
                     </div>
                     <div class="program-card-content">
                         <h3>BSc Nursing</h3>
@@ -1723,7 +1725,8 @@
             </div>
         </div>
     </section>
- <!-- Virtual Tour Section -->
+
+    <!-- Virtual Tour Section -->
     <section class="section virtual-tour" id="virtual-tour">
         <div class="container">
             <div class="section-title">
@@ -1797,7 +1800,8 @@
             </div>
         </div>
     </section>
-<!-- AI Assistant Section -->
+
+    <!-- AI Assistant Section -->
     <section class="section ai-assistant">
         <div class="container">
             <div class="section-title">
@@ -2022,7 +2026,8 @@
             </div>
         </div>
     </section>
-  <!-- Footer -->
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -2178,7 +2183,8 @@
                 });
             });
         });
-// Tuition Calculator
+        
+        // Tuition Calculator
         const tuitionCalculator = document.getElementById('tuitionCalculator');
         const calculatorResult = document.getElementById('calculatorResult');
         const tuitionAmount = document.getElementById('tuitionAmount');
