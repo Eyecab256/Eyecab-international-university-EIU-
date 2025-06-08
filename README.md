@@ -2475,6 +2475,422 @@
             // Add scroll event listener
             window.addEventListener('scroll', lazyLoad);
         });
-    </script>
+        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyecab International University - Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+        .col {
+            flex: 1;
+            padding: 0 10px;
+            min-width: 200px;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        .btn-submit {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 30px auto 0;
+        }
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+        .fee-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .course-selection {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .course-option {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .col {
+                flex: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/150x50?text=Eyecab+University" alt="Eyecab International University Logo" class="logo">
+            <h1>Eyecab International University</h1>
+            <h2>Undergraduate Application Form</h2>
+            <p>2024/2025 Academic Year - Private Admissions</p>
+        </div>
+
+        <form id="applicationForm">
+            <h3>Personal Information</h3>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="firstName" class="required">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" id="middleName" name="middleName">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="lastName" class="required">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="gender" class="required">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="dob" class="required">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="nationality" class="required">Nationality</label>
+                        <input type="text" id="nationality" name="nationality" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="phone" class="required">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address" class="required">Permanent Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+
+            <h3>Academic Information</h3>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="uceYear" class="required">UCE Year of Sitting</label>
+                        <input type="number" id="uceYear" name="uceYear" min="1900" max="2025" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="uceIndex" class="required">UCE Index Number</label>
+                        <input type="text" id="uceIndex" name="uceIndex" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="uaceYear" class="required">UACE Year of Sitting</label>
+                        <input type="number" id="uaceYear" name="uaceYear" min="1900" max="2025" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="uaceIndex" class="required">UACE Index Number</label>
+                        <input type="text" id="uaceIndex" name="uaceIndex" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="required">UCE Results (At least 5 passes)</label>
+                <div class="row">
+                    <div class="col">
+                        <label for="uceSubject1">Subject 1</label>
+                        <input type="text" id="uceSubject1" name="uceSubject1">
+                    </div>
+                    <div class="col">
+                        <label for="uceGrade1">Grade</label>
+                        <input type="text" id="uceGrade1" name="uceGrade1">
+                    </div>
+                </div>
+                <!-- Repeat for subjects 2-8 -->
+                <div class="row">
+                    <div class="col">
+                        <label for="uceSubject2">Subject 2</label>
+                        <input type="text" id="uceSubject2" name="uceSubject2">
+                    </div>
+                    <div class="col">
+                        <label for="uceGrade2">Grade</label>
+                        <input type="text" id="uceGrade2" name="uceGrade2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="uceSubject3">Subject 3</label>
+                        <input type="text" id="uceSubject3" name="uceSubject3">
+                    </div>
+                    <div class="col">
+                        <label for="uceGrade3">Grade</label>
+                        <input type="text" id="uceGrade3" name="uceGrade3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="uceSubject4">Subject 4</label>
+                        <input type="text" id="uceSubject4" name="uceSubject4">
+                    </div>
+                    <div class="col">
+                        <label for="uceGrade4">Grade</label>
+                        <input type="text" id="uceGrade4" name="uceGrade4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="uceSubject5">Subject 5</label>
+                        <input type="text" id="uceSubject5" name="uceSubject5">
+                    </div>
+                    <div class="col">
+                        <label for="uceGrade5">Grade</label>
+                        <input type="text" id="uceGrade5" name="uceGrade5">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="required">UACE Results (At least 2 Principal Passes)</label>
+                <div class="row">
+                    <div class="col">
+                        <label for="uaceSubject1">Principal Subject 1</label>
+                        <input type="text" id="uaceSubject1" name="uaceSubject1">
+                    </div>
+                    <div class="col">
+                        <label for="uaceGrade1">Grade</label>
+                        <input type="text" id="uaceGrade1" name="uaceGrade1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="uaceSubject2">Principal Subject 2</label>
+                        <input type="text" id="uaceSubject2" name="uaceSubject2">
+                    </div>
+                    <div class="col">
+                        <label for="uaceGrade2">Grade</label>
+                        <input type="text" id="uaceGrade2" name="uaceGrade2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="uaceSubject3">Subsidiary Subject 1</label>
+                        <input type="text" id="uaceSubject3" name="uaceSubject3">
+                    </div>
+                    <div class="col">
+                        <label for="uaceGrade3">Grade</label>
+                        <input type="text" id="uaceGrade3" name="uaceGrade3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="uaceSubject4">Subsidiary Subject 2</label>
+                        <input type="text" id="uaceSubject4" name="uaceSubject4">
+                    </div>
+                    <div class="col">
+                        <label for="uaceGrade4">Grade</label>
+                        <input type="text" id="uaceGrade4" name="uaceGrade4">
+                    </div>
+                </div>
+            </div>
+
+            <h3>Programme Selection</h3>
+            <div class="form-group">
+                <label for="studyMode" class="required">Mode of Study</label>
+                <select id="studyMode" name="studyMode" required>
+                    <option value="">Select Mode</option>
+                    <option value="day">Day Programme</option>
+                    <option value="evening">Evening Programme</option>
+                    <option value="afternoon">Afternoon Programme</option>
+                    <option value="external">External Programme</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="college" class="required">College</label>
+                <select id="college" name="college" required>
+                    <option value="">Select College</option>
+                    <option value="health">College of Health Sciences</option>
+                    <option value="agriculture">College of Agricultural and Environmental Sciences</option>
+                    <option value="engineering">College of Engineering, Design, Art and Technology</option>
+                    <option value="business">College of Business and Management Sciences</option>
+                    <option value="humanities">College of Humanities and Social Sciences</option>
+                    <option value="education">College of Education and External Studies</option>
+                    <option value="natural">College of Natural Sciences</option>
+                    <option value="computing">College of Computing and Information Sciences</option>
+                    <option value="law">School of Law</option>
+                    <option value="veterinary">College of Veterinary Medicine, Animal Resources and Biosecurity</option>
+                    <option value="business-school">Business School</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="programme" class="required">Preferred Programme</label>
+                <select id="programme" name="programme" required>
+                    <option value="">Select Programme</option>
+                    <!-- Health Sciences -->
+                    <option value="nursing" data-college="health">Bachelor of Nursing Science (5 Years)</option>
+                    <option value="speech" data-college="health">Bachelor of Science in Speech and Language Therapy (4 Years)</option>
+                    <option value="biomedical" data-college="health">Bachelor of Science in Biomedical Engineering (4 Years)</option>
+                    <option value="cytotechnology" data-college="health">Bachelor of Cytotechnology (3 Years)</option>
+                    <option value="optometry" data-college="health">Bachelor of Optometry (3 Years)</option>
+                    <option value="dental" data-college="health">Bachelor of Science in Dental Laboratory Technology (3 Years)</option>
+                    <option value="radiography" data-college="health">Bachelor of Science in Medical Radiography (3 Years)</option>
+                    
+                    <!-- Agricultural and Environmental Sciences -->
+                    <option value="agriculture" data-college="agriculture">Bachelor of Science in Agriculture (4 Years)</option>
+                    <option value="food" data-college="agriculture">Bachelor of Science in Food Science and Technology (4 Years)</option>
+                    <option value="agri-engineering" data-college="agriculture">Bachelor of Science in Agricultural Engineering (4 Years)</option>
+                    <option value="agribusiness" data-college="agriculture">Bachelor of Agribusiness Management (3 Years)</option>
+                    <option value="rural" data-college="agriculture">Bachelor of Agricultural and Rural Innovation (3 Years)</option>
+                    <option value="nutrition" data-college="agriculture">Bachelor of Science in Human Nutrition & Dietetics (4 Years)</option>
+                    <option value="forestry" data-college="agriculture">Bachelor of Science in Forestry (4 Years)</option>
+                    <option value="geographical" data-college="agriculture">Bachelor of Geographical Sciences (3 Years)</option>
+                    <option value="tourism" data-college="agriculture">Bachelor of Tourism and Hospitality Management (3 Years)</option>
+                    <option value="bioprocessing" data-college="agriculture">Bachelor of Science in Bioprocessing Engineering (4 Years)</option>
+                    <option value="water" data-college="agriculture">Bachelor of Science in Water and Irrigation Engineering (4 Years)</option>
+                    <option value="environmental" data-college="agriculture">Bachelor of Environmental Science (3 Years)</option>
+                    
+                    <!-- Engineering, Design, Art and Technology -->
+                    <option value="civil" data-college="engineering">Bachelor of Science in Civil Engineering (4 Years)</option>
+                    <option value="electrical" data-college="engineering">Bachelor of Science in Electrical Engineering (4 Years)</option>
+                    <option value="mechanical" data-college="engineering">Bachelor of Science in Mechanical Engineering (4 Years)</option>
+                    <option value="surveying" data-college="engineering">Bachelor of Science in Land Surveying and Geomatics (4 Years)</option>
+                    <option value="architecture" data-college="engineering">Bachelor of Architecture (5 Years)</option>
+                    <option value="quantity" data-college="engineering">Bachelor of Science in Quantity Surveying (4 Years)</option>
+                    <option value="fine-art" data-college="engineering">Bachelor of Fine Art (3 Years)</option>
+                    <option value="industrial" data-college="engineering">Bachelor of Industrial Art and Applied Design (3 Years)</option>
+                    <option value="visual" data-college="engineering">Bachelor of Visual Communication, Design & Multi-Media (3 Years)</option>
+                    <option value="urban" data-college="engineering">Bachelor of Urban and Regional Planning (4 Years)</option>
+                    <option value="valuation" data-college="engineering">Bachelor of Science in Valuation (4 Years)</option>
+                    
+                    <!-- Business and Management Sciences -->
+                    <option value="statistics" data-college="business">Bachelor of Statistics (3 Years)</option>
+                    <option value="actuarial" data-college="business">Bachelor of Science in Actuarial Science (3 Years)</option>
+                    <option value="economics" data-college="business">Bachelor of Arts in Economics (3 Years)</option>
+                    <option value="quantitative" data-college="business">Bachelor of Science in Quantitative Economics (3 Years)</option>
+                    <option value="commerce" data-college="business">Bachelor of Commerce (3 Years)</option>
+                    <option value="business-admin" data-college="business">Bachelor of Business Administration (3 Years)</option>
+       
 </body>
 </html>
