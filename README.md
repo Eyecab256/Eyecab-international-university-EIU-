@@ -6,7 +6,7 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com"  crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CDN for Icons -->
@@ -351,6 +351,14 @@
                 flex-direction: column;
                 gap: 2rem;
                 font-size: 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
             }
         }
 
@@ -748,28 +756,9 @@
             margin-bottom: 10px;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .admissions-form,
-            .contact-form {
-                padding: 2rem;
-            }
-        }
-
         @media (max-width: 576px) {
             .stats-container {
                 grid-template-columns: 1fr;
-            }
-
-            .tour-iframe {
-                height: 300px;
             }
 
             .footer-container {
@@ -833,7 +822,7 @@
                         <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
                         <div class="feature-text">
                             <h4>Application Deadlines</h4>
-                            <p>Fall Semester: June 30<br>Spring Semester: November 15</p>
+                            <p>August Intake: June 30, 2025<br>January Intake: November 15, 2025</p>
                         </div>
                     </div>
                     <div class="feature-item">
@@ -893,7 +882,7 @@
         </div>
         
         <div class="programs-grid">
-            <div class="program-card" data-category="business engineering">
+            <div class="program-card" data-category="business">
                 <div class="program-card-img">
                     <img src="https://source.unsplash.com/600x400/?business,technology" alt="Business Administration" loading="lazy">
                 </div>
@@ -949,7 +938,7 @@
     <div class="container">
         <div class="section-title">
             <h2>Undergraduate Application Form</h2>
-            <p>2024/2025 Academic Year - Private Admissions</p>
+            <p>2025/2026 Academic Year - August Intake</p>
         </div>
         
         <form id="applicationForm" action="submit_application.php" method="post" enctype="multipart/form-data">
@@ -1359,41 +1348,6 @@
     </div>
 </section>
 
-<!-- Tuition Calculator -->
-<section class="section calculator" id="calculator">
-    <div class="container">
-        <div class="section-title">
-            <h2>Tuition Calculator</h2>
-            <p>Estimate your educational costs with our simple tuition calculator.</p>
-        </div>
-        
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="programDuration">Program Duration (years)</label>
-                    <input type="number" id="programDuration" name="programDuration" value="4" min="2" max="6">
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="annualTuition">Annual Tuition Fee (USD)</label>
-                    <input type="number" id="annualTuition" name="annualTuition" value="12000" min="5000" max="30000">
-                </div>
-            </div>
-        </div>
-        
-        <div class="form-group">
-            <button id="calculateTuition" type="button" class="btn btn-primary">Calculate Total Cost</button>
-        </div>
-        
-        <div id="calculatorResult" class="fee-info" style="display: none;">
-            <h4>Estimated Total Tuition</h4>
-            <p id="tuitionAmount">$0</p>
-            <p id="tuitionBreakdown"></p>
-        </div>
-    </div>
-</section>
-
 <!-- Testimonials -->
 <section class="testimonials" id="testimonials" style="background-color: #f8f9fa;">
     <div class="container">
@@ -1609,7 +1563,7 @@
     const themeToggle = document.getElementById('themeToggle');
     const currentTheme = localStorage.getItem('theme');
 
-    if (currentTheme === 'dark' || (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (currentTheme === 'dark' || (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.body.setAttribute('data-theme', 'dark');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
@@ -1749,19 +1703,6 @@
             nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
         });
     });
-
-    // Tuition Calculator
-    document.getElementById('calculateTuition').addEventListener('click', calculateTuition);
-
-    function calculateTuition() {
-        const duration = parseInt(document.getElementById('programDuration').value);
-        const annualTuition = parseInt(document.getElementById('annualTuition').value);
-        
-        const totalTuition = duration * annualTuition;
-        document.getElementById('tuitionAmount').textContent = `$${totalTuition.toLocaleString()}`;
-        document.getElementById('tuitionBreakdown').textContent = `($${annualTuition.toLocaleString()} per year x ${duration} years)`;
-        document.getElementById('calculatorResult').style.display = 'block';
-    }
 
     // Filter programmes by college
     const collegeSelect = document.getElementById('college');
